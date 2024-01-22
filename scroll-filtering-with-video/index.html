@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-controlled Music</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="content" style="height: 1000vh"></div>
+    <div class="video-container">
+      <video id="scroll-video" src="./output.mp4" muted></video>
+    </div>
+    <div id="cutoff-freq-container">
+      <span> Cutoff Frequency: </span>
+      <span id="cutoff-freq">100hz</span>
+    </div>
+    <div id="progress-container">
+      <span> Progress: </span>
+      <span id="progress-percentage">0%</span>
+    </div>
+    <button id="start-btn">Enter Experience</button>
+    <script src="./script.js"></script>
+  </body>
+</html>
