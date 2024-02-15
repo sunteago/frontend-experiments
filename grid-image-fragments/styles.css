@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --size: 40vw;
+}
+
+body {
+  background-color: rgb(36, 34, 34);
+}
+.container {
+  overflow: hidden;
+  position: relative;
+  margin-top: 25%;
+  /* top: 50%; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--size);
+  width: var(--size);
+}
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.grid > div {
+  position: relative;
+  /* background: url("./iguazu.jpg"); */
+}
+
+.grid > div::after {
+  content: "";
+  opacity: 0;
+  background: white;
+  /* filter: blur(0); */
+  opacity: 0.2;
+  /* transition: transform 0.25s ease-in, opacity 0.25s ease-in; */
+  transition: filter 0.25s ease-in, opacity 0.25s ease-in;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.grid > div:hover::after {
+  opacity: 0.5;
+  /* filter: blur(25px); */
+  transform: rotateZ(90deg);
+}
